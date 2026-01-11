@@ -1,10 +1,10 @@
-package Properties.types;
+package terrains.terrainTypes;
 
-import Properties.Property;
+import terrains.Terrain;
 
-public class Terrain extends Property {
+public class Property extends Terrain {
 
-    public Terrain(String name, int price) {
+    public Property(String name, int price) {
         super(name, price);
     }
 

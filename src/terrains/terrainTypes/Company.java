@@ -1,7 +1,7 @@
-package Properties.types;
+package terrains.terrainTypes;
 
-import Properties.Property;
-public class Company extends Property {
+import terrains.Terrain;
+public class Company extends Terrain {
 
     public Company(String name, int price) {
         super(name, price);

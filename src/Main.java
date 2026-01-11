@@ -1,13 +1,13 @@
-import Properties.*;
+import terrains.*;
 
 void main() {
-    Property rueDeLaPaix = PropertyFactory.createProperty("terrain","Rue de la Paix", 400);
-    Property rueDeCourcelles = PropertyFactory.createProperty("terrain","Rue de Courcelles", 100);
+    Terrain rueDeLaPaix = TerrainFactory.createProperty("terrain","Rue de la Paix", 400);
+    Terrain rueDeCourcelles = TerrainFactory.createProperty("terrain","Rue de Courcelles", 100);
 
     rueDeLaPaix.displayInfo();
     rueDeCourcelles.displayInfo();
 
-    Property gareMontparnasse = PropertyFactory.createProperty("station","Gare Montparnasse", 200);
+    Terrain gareMontparnasse = TerrainFactory.createProperty("station","Gare Montparnasse", 200);
 
     gareMontparnasse.displayInfo();
 }

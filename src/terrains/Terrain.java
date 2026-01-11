@@ -1,10 +1,10 @@
-package Properties;
+package terrains;
 
-public abstract class Property {
+public abstract class Terrain {
     protected String name;
     protected int price;
 
-    public Property(String name, int price) {
+    public Terrain(String name, int price) {
         this.name = name;
         this.price = price;
     }
