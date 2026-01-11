@@ -10,7 +10,7 @@ public class Property extends Terrain {
 
     @Override
     public void displayInfo() {
-        System.out.println("Terrain : " + name + " - " + price + "€");
+        System.out.println("Property : " + name + " - " + price + "€");
     }
 }
 
