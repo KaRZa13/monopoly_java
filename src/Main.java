@@ -1,6 +1,6 @@
-import dao.Joueur;
-import dao.JoueurDao;
-import dao.JoueurDaoImpl;
+import dao.Player;
+import dao.PlayerDao;
+import dao.PlayerDaoImpl;
 import iterator.Iterator;
 import iterator.concrete.Board;
 import iterator.models.BoardSpaces;
@@ -30,30 +30,28 @@ void main() {
         space.displayInfo();
     }
 
-
-
-    JoueurDao joueurDao = new JoueurDaoImpl();
+    PlayerDao playerDao = new PlayerDaoImpl();
 
     System.out.println("Liste des joueurs :");
-    for (Joueur joueur : joueurDao.getTousLesJoueurs()) {
-        System.out.println(joueur);
+    for (Player player : playerDao.getAllPlayers()) {
+        System.out.println(player);
     }
 
-    for (Joueur joueur : joueurDao.getTousLesJoueurs()) {
-        joueur.setCash(joueur.getCash() + 100);
-        joueurDao.updateJoueur(joueur);
+    for (Player player : playerDao.getAllPlayers()) {
+        player.setCash(player.getCash() + 100);
+        playerDao.updatePlayer(player);
     }
 
     System.out.println("\nAprès ajout de 100 balles :");
-    for (Joueur joueur : joueurDao.getTousLesJoueurs()) {
-        System.out.println(joueur);
+    for (Player player : playerDao.getAllPlayers()) {
+        System.out.println(player);
     }
 
-    Joueur joueurDelete = joueurDao.getTousLesJoueurs().get(0);
-    joueurDao.deleteJoueur(joueurDelete);
+    Player playerDelete = playerDao.getAllPlayers().getFirst();
+    playerDao.deletePlayer(playerDelete);
 
     System.out.println("\nAprès suppression :");
-    for (Joueur j : joueurDao.getTousLesJoueurs()) {
+    for (Player j : playerDao.getAllPlayers()) {
         System.out.println(j);
     }
 }

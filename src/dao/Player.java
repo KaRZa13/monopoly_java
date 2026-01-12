@@ -1,11 +1,13 @@
 package dao;
 
-public class Joueur {
+import java.util.Objects;
+
+public final class Player {
 
     private String name;
     private int cash;
 
-    public Joueur(String name, int cash) {
+    public Player(String name, int cash) {
         this.name = name;
         this.cash = cash;
     }
@@ -25,6 +27,19 @@ public class Joueur {
     public void setCash(int cash) {
         this.cash = cash;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Player player)) return false;
+        return Objects.equals(name, player.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
     @Override
     public String toString() {
         return "Name=" + name +
